@@ -1,9 +1,9 @@
 module Play where
-import Data.Char ( isPunctuation, toLower ) 
+import Data.Char ( isPunctuation, toLower, isAlpha ) 
 
 isPalindrome :: String -> Maybe Bool
 isPalindrome =
-     reverseMaybe . rejectEmpty . normalize 
+    reverseMaybe . rejectEmpty . normalize 
 
 tReverse :: [Char] -> Bool
 tReverse t =
@@ -34,4 +34,12 @@ noSpace t = not (t == ' ')
 tPunctuation :: Char -> Bool
 tPunctuation x = not (isPunctuation x)
 
-
+-- Ignore nonAlphabetics
+-- Use foldr and all and lambda function
+-- Learn Haskell thunks
+ignoreNonAlpha :: String -> Maybe String
+ignoreNonAlpha x = 
+    if all isAlpha x
+        then Just x
+        else Nothing
+        
