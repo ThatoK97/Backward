@@ -1,4 +1,4 @@
-module Play where
+module Play ( isPalindrome ) where
 import Data.Char ( isPunctuation, toLower, isAlpha ) 
 
 isPalindrome :: String -> Maybe Bool

@@ -1,4 +1,4 @@
-import Play ( isPalindrome )
+import Play (isPalindrome)
 
 main :: IO ()
 main = 
