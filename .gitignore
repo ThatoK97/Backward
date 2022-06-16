@@ -1,5 +1,7 @@
-/.exe
-
-/.hi
-
-/.o
+dist 
+dist-*
+*.o 
+*.hi
+*.hie
+*.exe
+.ghc.environment
